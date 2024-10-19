@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Blog" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <form action="/afterEdit" method="POST">
+        <input type="hidden" name="pIndex" value="<%= pIndex %>">
+        <input type="text" name="pHead" value="<%= posts[pIndex]["pHead"] %>">
+        <input type="text" name="pBody" value="<%= posts[pIndex]["pBody"] %>">
+        <input type="submit" value="edit">
+    </form>
+
+</body>
+</html>

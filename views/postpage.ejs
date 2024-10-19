@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+
+    <h1>
+        <%= posts[pIndex]["pHead"] %>
+    </h1>
+    <p>
+        <%= posts[pIndex]["pBody"] %>
+    </p>
+    <form action="/delete" method="post">
+        <input type="hidden" name="pIndex" value="<%= pIndex%>" >
+        <input type="submit" value="Delete">
+    </form>
+    <form action="/edit" method="post">
+        <input type="hidden" name="pIndex" value="<%= pIndex%>" >
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>
