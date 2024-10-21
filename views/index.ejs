@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="Blog" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <%- include("partials/navbar.ejs") %>
+    <%- include("partials/header.ejs") %>
 
-    <form action="/" method="POST">
-        <input type="text" placeholder="post head" name="pHead">
-        <input type="text" placeholder="post body" name="pBody">
-        <input type="submit" value="upload">
-    </form>
-
+    <div class="main-page">
+        <h1>Add New Post</h1>
+        <form action="/" method="POST">
+            <input type="text" placeholder="post head" name="pHead">
+            <input type="text" placeholder="post body" name="pBody">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+</div>
 </body>
 </html>
