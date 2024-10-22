@@ -1,12 +1,16 @@
     <%- include("partials/header.ejs") %>
-    <div class="main-page">
-    <h1>Edit Post</h1>
-    <form action="/afterEdit" method="POST">
-        <input type="hidden" name="pIndex" value="<%= pIndex %>">
-        <input type="text" name="pHead" value="<%= posts[pIndex]["pHead"] %>">
-        <input type="text" name="pBody" value="<%= posts[pIndex]["pBody"] %>">
-        <input type="submit" value="edit">
-    </form>
-</div>
+    
+    <div class="page">
+        <h1 class="page-title">Edit Post</h1>
+
+        <form class="page-body" action="/afterEdit" method="POST" >
+            <input type="hidden" name="pIndex" value="<%= pIndex %>">
+            <label>Post Title:</label>
+            <input class="page-body-item" type="text" name="pHead" value="<%= posts[pIndex]["pHead"] %>" >
+            <label>Post Body:</label>
+            <textarea class="page-body-item post-body"  name="pBody"> <%= posts[pIndex]["pBody"] %> </textarea>
+            <input class="page-body-item page-button" type="submit" value="edit">
+        </form>
+    </div>
 </body>
 </html>

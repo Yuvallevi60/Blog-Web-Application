@@ -1,15 +1,25 @@
     <%- include("partials/header.ejs") %>
-<div class="main-page">
-    <h1> <%= posts[pIndex]["pHead"] %> </h1>
-    <p> <%= posts[pIndex]["pBody"] %> </p>
-    <form action="/delete" method="post">
-        <input type="hidden" name="pIndex" value="<%= pIndex%>" >
-        <input type="submit" value="Delete">
-    </form>
-    <form action="/edit" method="post">
-        <input type="hidden" name="pIndex" value="<%= pIndex%>" >
-        <input type="submit" value="Edit">
-    </form>
-</div>
+
+    <div class="page">
+        <h1 class="page-title"> <%= posts[pIndex]["pHead"] %> </h1>
+
+        <div class="page-body">
+            <p class="page-body-item post-body"> <%= posts[pIndex]["pBody"] %> </p>
+
+            <div class="buttons-row page-body-item">
+                <form action="/delete" method="post">
+                    <input type="hidden" name="pIndex" value="<%= pIndex%>" >
+                    <input class="page-button" type="submit" value="Delete">
+                </form>
+
+                <form action="/edit" method="post">
+                    <input type="hidden" name="pIndex" value="<%= pIndex%>" >
+                    <input class="page-button" type="submit" value="Edit">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 </html>

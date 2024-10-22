@@ -1,11 +1,14 @@
     <%- include("partials/header.ejs") %>
 
-    <div class="main-page">
-        <h1>Add New Post</h1>
-        <form action="/" method="POST">
-            <input type="text" placeholder="post head" name="pHead">
-            <input type="text" placeholder="post body" name="pBody">
-            <input type="submit" value="Add">
+    <div class="page">
+        <h1 class="page-title">Add New Post</h1>
+
+        <form action="/" method="POST" class="page-body">
+            <label>Post Title:</label>
+            <input type="text" name="pHead" class="page-body-item">
+            <label>Post Body:</label>
+            <textarea class="page-body-item post-body" name="pBody"></textarea>
+            <input class="page-body-item page-button" type="submit" value="Add">
         </form>
     </div>
 </div>
